@@ -1,26 +1,56 @@
-{
-    "undefined": [
-        "void 0",
-        "[]['']"
-    ],
-    "false": [
-        "![]",
-        "!{}",
-        "!!''",
-        "!!\"\""
-    ],
-    "true": [
-        "!![]",
-        "!!{}",
-        "!''",
-        "!\"\""
-    ],
-    "NaN": [
-        "+{}",
-        "0/0",
-    ],
-    "Infinity": [
-        "1/0",
-        "-Math.log(0)"
-    ]
-}
+
+            {
+     	"undefined": [
+     		"void 0",
+     		"[]['']",
+     		"0[0]",
+     		"0..$",
+     		"(function(){})()"
+     	],
+     	"null": [
+     		"\"\".__proto__.__proto__.__proto__",
+     		"Object.getPrototypeOf(Object.prototype)",
+     		"(new Event(\"\")).target"
+     	],
+     	"false": [
+     		"![]",
+     		"!{}",
+     		"!!''",
+     		"!!\"\"",
+     		"!1",
+     		"![]",
+     		"delete NaN",
+     		"0 in []",
+     		"0 instanceof Object",
+     		"[].some(Object"
+    
+     	],
+     	"true": [
+     		"!![]",
+     		"!!{}",
+     		"!''",
+     		"!\"\"",
+     		"!0",
+     		"!-0",
+     		"!NaN",
+     		"!\"\"",
+     		"delete 0",
+     		"0 in [0]",
+     		"[] instanceof Object",
+     		"isNan()",
+     		"[].every(eval)"
+     	],
+     	"NaN": [
+     		"+{}",
+     		"0/0",
+     		"+undefined",
+     		"Math.acos(2)",
+     		"Math.log()"
+     	],
+     	"Infinity": [
+     		"1/0",
+     		"1e1000",
+     		"Math.atanh(1)",
+     		"-Math.log(0)"
+     	]
+     }
